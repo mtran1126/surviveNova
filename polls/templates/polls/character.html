@@ -1,0 +1,30 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Character - surviveNova</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <h1>Create Your Character!</h1>
+
+    <p>What should we call you?</p>
+
+    <form method="POST" action="{% url 'character' %}">
+        {% csrf_token %}
+
+        <input type="text"
+               name="character_name"
+               placeholder="Enter your name"
+               maxlength="30"
+               required>
+
+        <button type="submit">Continue</button>
+    </form>
+
+</body>
+</html>
