@@ -22,8 +22,9 @@
                placeholder="Enter your name"
                maxlength="30"
                required>
-
-        <button type="submit">Continue</button>
+        <form action="{% url 'stats' %}" method="get">
+            <button type="submit">Continue</button>
+        </form>
     </form>
 
 </body>
