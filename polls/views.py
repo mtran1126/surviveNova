@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Scenario
 
 def index(request):
     return render(request, "polls/index.html")
@@ -24,3 +25,7 @@ def stats(request):
     return render(request, "polls/stats.html", {
         "name": name
     })
+
+def scenarios(request):
+    scenarios = Scenario.objects.all()
+    return render(request, "polls/scenarios.html", {"scenarios": scenarios})

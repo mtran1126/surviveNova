@@ -9,5 +9,14 @@
 </head>
 <body>  
     <h1>Random Scenario!</h1>
+    {% for scenario in scenarios %}
+        <div class="scenario">
+            <p>{{ scenario.description }}</p>
+            <ul>
+                <li>{{ scenario.option1 }}</li>
+                <li>{{ scenario.option2 }}</li>
+            </ul>
+        </div>
+    {% endfor %}
 </body>
 </html>
