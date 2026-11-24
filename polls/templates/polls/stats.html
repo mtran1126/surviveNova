@@ -12,12 +12,16 @@
 
     <h1>Welcome, {{ name }}!</h1>
 
-    <p>Your Semester starts with:</p>
+    <p>Your Semester:</p>
 
     <p>GPA: 4.0</p>
     <p>Sleep Score: 100</p>
     <p>Money: 100</p>
     <p>Happiness: 100</p>
 
+    <form action="{% url 'scenarios' %}" method="get">
+        <button type="submit" id="start-game">
+            Start Your Semester!
+        </button>
 </body>
 </html>
